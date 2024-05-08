@@ -84,7 +84,7 @@ final class TaskListViewController: UITableViewController {
     
     @IBAction func sortingList(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            taskLists = taskLists.sorted(byKeyPath: "date")
+            taskLists = taskLists.sorted(byKeyPath: "date", ascending: false) // ascending отвечает за восхождение
         } else {
             taskLists = taskLists.sorted(byKeyPath: "title")
         }
